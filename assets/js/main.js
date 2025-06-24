@@ -10,6 +10,11 @@ function calcularIMC() {
 
         const imc = peso / (altura * altura);
 
+        if (isNaN(imc) || imc <= 0) {
+            document.querySelector('.resultado').innerHTML = `<h2 style="color: red;">Por favor, insira valores válidos para peso e altura.</h2>`;
+            return;
+        }
+
         if (imc < 18.5) {
             document.querySelector('.resultado').innerHTML = `<h2 style="background-color: red; color: white;">Seu IMC é: ${imc.toFixed(2)} - Abaixo do peso</h2>`;
         } else if (imc >= 18.5 && imc < 24.9) {
