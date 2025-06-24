@@ -1,14 +1,3 @@
-document.addEventListener('form', (event) => {
-    event.preventDefault();
-
-    const peso = document.querySelector('#peso').value;
-    const altura = document.querySelector('#altura').value;
-
-    if (peso > 0 && peso <= 18) {
-        document.querySelector('.resultado').innerHTML = 'Abaixo do peso';
-    }
-
-});
 
 function calcularIMC() {
     const form = document.querySelector('form');
